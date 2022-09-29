@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.16981983, g: 0.16091147, b: 0.29294702, a: 1}
+  m_IndirectSpecularColor: {r: 0.16687909, g: 0.157803, b: 0.28927734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1715,6 +1715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ledges:
+  - {fileID: 737178433}
   - {fileID: 1779308218}
   - {fileID: 330255774}
   - {fileID: 817271136}
