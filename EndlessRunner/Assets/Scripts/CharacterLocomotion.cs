@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterLocomotion : MonoBehaviour
 {
-    public float moveSpeed = 3;
+    public float moveSpeed = 3f;
 
 
     void Update()

@@ -22,15 +22,15 @@ public class LedgeGenerator : MonoBehaviour
     IEnumerator GenerateLedge()
     {
 
-        ledgeNumber = Random.Range(0, 7);
+        ledgeNumber = Random.Range(0, 6);
         clone = Instantiate(ledges[ledgeNumber], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
         ledgePosition++;
-        Destroy(clone, 8);
+        Destroy(clone, 6);
         clone = Instantiate(ledges[0], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
-        Destroy(clone, 8);
+        Destroy(clone, 6);
         ledgePosition++;
         clone = Instantiate(ledges[0], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
-        Destroy(clone, 8);
+        Destroy(clone, 6);
         ledgePosition++;
         yield return new WaitForSeconds(1);
         creatingLedge = false;

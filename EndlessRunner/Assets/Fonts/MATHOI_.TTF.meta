@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2765417a5c8e8f4489e942f8072942c9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mathmos Original
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7690407ce6f65cb409feb36d1506b296, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
