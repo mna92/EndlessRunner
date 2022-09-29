@@ -22,7 +22,7 @@ public class LedgeGenerator : MonoBehaviour
     IEnumerator GenerateLedge()
     {
 
-        ledgeNumber = Random.Range(0, 6);
+        ledgeNumber = Random.Range(1, 7);
         clone = Instantiate(ledges[ledgeNumber], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
         ledgePosition++;
         Destroy(clone, 6);
