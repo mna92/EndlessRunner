@@ -5,19 +5,20 @@ using UnityEngine.UI;
 
 public class CrashEndGame : MonoBehaviour
 {
-    public AudioSource crashSound;
-    public AudioSource bgm;
+    public AudioSource crashSound, bgm, gameOver;
     public GameObject globalScript;
     public GameObject playerObject;
     public GameObject gameOverFinalScore;
     public GameObject splashBackground;
     public GameObject tapToStart;
     public GameObject mainCameraPosition;
+    public GameObject locomotionButtons;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "CrashBox")
         {
+            locomotionButtons.SetActive(false);
             StartCoroutine(SplashEndGame());
         }
     }
@@ -30,6 +31,7 @@ public class CrashEndGame : MonoBehaviour
         playerObject.GetComponent<CharacterLocomotion>().enabled = false;
         gameOverFinalScore.GetComponentInChildren<Text>().text = "FINAL SCORE: " + ScoreCubeMonitor.scoreNumber;
         yield return new WaitForSeconds(1f);
+        gameOver.Play();
         splashBackground.SetActive(true);
         splashBackground.GetComponent<Animator>().Play("BackgroundFadeIn");
 
@@ -43,5 +45,6 @@ public class CrashEndGame : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         tapToStart.GetComponent<Button>().enabled = true;
+        locomotionButtons.SetActive(true);
     }
 }
