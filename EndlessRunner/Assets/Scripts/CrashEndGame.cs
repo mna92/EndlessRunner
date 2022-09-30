@@ -13,12 +13,15 @@ public class CrashEndGame : MonoBehaviour
     public GameObject tapToStart;
     public GameObject mainCameraPosition;
     public GameObject locomotionButtons;
+    public GameObject lastScore;
+    public int lastScoreValue;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "CrashBox")
         {
             locomotionButtons.SetActive(false);
+            lastScoreValue = PlayerPrefs.GetInt("LastScore");
             StartCoroutine(SplashEndGame());
         }
     }
@@ -30,6 +33,9 @@ public class CrashEndGame : MonoBehaviour
         globalScript.GetComponent<LedgeGenerator>().enabled = false;
         playerObject.GetComponent<CharacterLocomotion>().enabled = false;
         gameOverFinalScore.GetComponentInChildren<Text>().text = "FINAL SCORE: " + ScoreCubeMonitor.scoreNumber;
+        PlayerPrefs.SetInt("LastScore", ScoreCubeMonitor.scoreNumber);
+        lastScore.GetComponent<Text>().text = "LAST SCORE: " + lastScoreValue;
+
         yield return new WaitForSeconds(1f);
         gameOver.Play();
         splashBackground.SetActive(true);
@@ -40,8 +46,10 @@ public class CrashEndGame : MonoBehaviour
         tapToStart.GetComponent<Animator>().Play("TapToStartAnim");
         playerObject.transform.position = new Vector3(-2, 1, 1);
         mainCameraPosition.transform.position = new Vector3(-2.5f, 5.5f, 1);
+
         yield return new WaitForSeconds(0.7f);
         gameOverFinalScore.SetActive(true);
+        lastScore.SetActive(true);
 
         yield return new WaitForSeconds(1f);
         tapToStart.GetComponent<Button>().enabled = true;
