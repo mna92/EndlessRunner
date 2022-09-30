@@ -6,31 +6,42 @@ using UnityEngine.UI;
 public class CrashEndGame : MonoBehaviour
 {
     public AudioSource crashSound;
-    public GameObject ledgeGenerator;
+    public AudioSource bgm;
+    public GameObject globalScript;
     public GameObject playerObject;
-    public GameObject finalScore;
+    public GameObject gameOverFinalScore;
     public GameObject splashBackground;
+    public GameObject tapToStart;
+    public GameObject mainCameraPosition;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "CrashBox")
         {
-            crashSound.Play();
-            ledgeGenerator.SetActive(false);
-            playerObject.GetComponent<CharacterLocomotion>().enabled = false;
-            finalScore.GetComponent<Text>().text = "FINAL SCORE: " + ScoreCubeMonitor.scoreNumber;
-            ScoreCubeMonitor.scoreNumber = 0;
-            playerObject.transform.position = new Vector3(-2, 1, 1);
             StartCoroutine(SplashEndGame());
-
         }
     }
 
     IEnumerator SplashEndGame()
     {
+        bgm.enabled = false;
+        crashSound.Play();
+        globalScript.GetComponent<LedgeGenerator>().enabled = false;
+        playerObject.GetComponent<CharacterLocomotion>().enabled = false;
+        gameOverFinalScore.GetComponentInChildren<Text>().text = "FINAL SCORE: " + ScoreCubeMonitor.scoreNumber;
+        yield return new WaitForSeconds(1f);
         splashBackground.SetActive(true);
         splashBackground.GetComponent<Animator>().Play("BackgroundFadeIn");
+
         yield return new WaitForSeconds(1f);
-        finalScore.SetActive(true);
+        tapToStart.SetActive(true);
+        tapToStart.GetComponent<Animator>().Play("TapToStartAnim");
+        playerObject.transform.position = new Vector3(-2, 1, 1);
+        mainCameraPosition.transform.position = new Vector3(-2.5f, 5.5f, 1);
+        yield return new WaitForSeconds(0.7f);
+        gameOverFinalScore.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        tapToStart.GetComponent<Button>().enabled = true;
     }
 }

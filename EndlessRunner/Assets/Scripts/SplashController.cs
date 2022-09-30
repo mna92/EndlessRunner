@@ -13,6 +13,7 @@ public class SplashController : MonoBehaviour
     public GameObject countDown;
     public GameObject playerObject;
     public AudioSource countdownAudio;
+    public GameObject finalScore;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,8 @@ public class SplashController : MonoBehaviour
 
     public void TapToStartButton()
     {
+        ScoreCubeMonitor.scoreNumber = 0;
+        LedgeGenerator.ledgePosition = 4;
         splashBackground.GetComponent<Animator>().enabled = true;
         splashBackground.GetComponent<Animator>().Play("BackgroundFadeOut");
         tapToStart.SetActive(false);
@@ -47,6 +50,7 @@ public class SplashController : MonoBehaviour
 
     IEnumerator GameBegin()
     {
+        finalScore.SetActive(false);
         yield return new WaitForSeconds(1f);
         splashBackground.SetActive(false);
         countDown.SetActive(true);
