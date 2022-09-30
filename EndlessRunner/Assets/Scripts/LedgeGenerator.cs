@@ -5,7 +5,7 @@ using UnityEngine;
 public class LedgeGenerator : MonoBehaviour
 {
     public GameObject[] ledges;
-    public int ledgePosition = 4;
+    public static int ledgePosition = 4;
     public int ledgeNumber;
     public bool creatingLedge = false;
     GameObject clone;

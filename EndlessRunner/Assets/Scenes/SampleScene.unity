@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17045039, g: 0.1616975, b: 0.29378885, a: 1}
+  m_IndirectSpecularColor: {r: 0.14148334, g: 0.13370106, b: 0.2559216, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1258,7 +1258,6 @@ MonoBehaviour:
   - {fileID: 2012993286676013322, guid: 25cebc3eeeccfcd4ab80d921c3f79b4e, type: 3}
   - {fileID: 6793390669032335737, guid: 37e1a36a0beda834c91f945f9584cff9, type: 3}
   - {fileID: 4555194062457687018, guid: 21758a38b21e21c418549137f0f9e178, type: 3}
-  ledgePosition: 4
   ledgeNumber: 0
   creatingLedge: 0
 --- !u!4 &501524590
@@ -1354,6 +1353,7 @@ MonoBehaviour:
   countDown: {fileID: 1846525432}
   playerObject: {fileID: 713549270}
   countdownAudio: {fileID: 262698583}
+  finalScore: {fileID: 1453815010}
 --- !u!1 &502050436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,10 +2122,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crashSound: {fileID: 1424901008}
-  ledgeGenerator: {fileID: 0}
-  playerObject: {fileID: 0}
-  finalScore: {fileID: 0}
-  splashBackground: {fileID: 0}
+  bgm: {fileID: 997660301}
+  globalScript: {fileID: 501524588}
+  playerObject: {fileID: 713549270}
+  gameOverFinalScore: {fileID: 1453815010}
+  splashBackground: {fileID: 1530290137}
+  tapToStart: {fileID: 2014407423}
+  mainCameraPosition: {fileID: 963194225}
 --- !u!1001 &719785292
 PrefabInstance:
   m_ObjectHideFlags: 0
