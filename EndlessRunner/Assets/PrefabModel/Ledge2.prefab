@@ -316,10 +316,9 @@ GameObject:
   - component: {fileID: 5408413392342422698}
   - component: {fileID: 5408413392342422699}
   - component: {fileID: 5408413392342422696}
-  - component: {fileID: 5271980734443552787}
   m_Layer: 0
   m_Name: FloorRight (2)
-  m_TagString: Untagged
+  m_TagString: CrashBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,18 +401,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5271980734443552787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5408413392342422710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad0a559fd00c324f9d60b4fd31927bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5408413392891203637
 GameObject:
   m_ObjectHideFlags: 0

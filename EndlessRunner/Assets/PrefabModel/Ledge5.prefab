@@ -159,10 +159,9 @@ GameObject:
   - component: {fileID: 6793390669976737166}
   - component: {fileID: 6793390669976737165}
   - component: {fileID: 6793390669976737164}
-  - component: {fileID: 2035095089911871849}
   m_Layer: 0
   m_Name: FloorRight (3)
-  m_TagString: Untagged
+  m_TagString: CrashBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,18 +244,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2035095089911871849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793390669976737162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad0a559fd00c324f9d60b4fd31927bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6793390670080415362
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,10 +256,9 @@ GameObject:
   - component: {fileID: 6793390670080415366}
   - component: {fileID: 6793390670080415365}
   - component: {fileID: 6793390670080415364}
-  - component: {fileID: 5023871568557014939}
   m_Layer: 0
   m_Name: FloorRight (2)
-  m_TagString: Untagged
+  m_TagString: CrashBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,18 +341,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5023871568557014939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793390670080415362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad0a559fd00c324f9d60b4fd31927bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6793390670379578445
 GameObject:
   m_ObjectHideFlags: 0
