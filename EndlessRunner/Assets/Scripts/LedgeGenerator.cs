@@ -9,6 +9,8 @@ public class LedgeGenerator : MonoBehaviour
     public int ledgeNumber;
     public bool creatingLedge = false;
     GameObject clone;
+    public static float generatorYield = 0.985f;
+    public static int destroyDelay;
 
     private void Update()
     {
@@ -25,14 +27,14 @@ public class LedgeGenerator : MonoBehaviour
         ledgeNumber = Random.Range(1, 7);
         clone = Instantiate(ledges[ledgeNumber], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
         ledgePosition++;
-        Destroy(clone, 10);
+        Destroy(clone, destroyDelay);
         clone = Instantiate(ledges[0], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
-        Destroy(clone, 10);
+        Destroy(clone, destroyDelay);
         ledgePosition++;
         clone = Instantiate(ledges[0], new Vector3(ledgePosition, 0, 1), Quaternion.identity);
-        Destroy(clone, 10);
+        Destroy(clone, destroyDelay);
         ledgePosition++;
-        yield return new WaitForSeconds(0.985f);
+        yield return new WaitForSeconds(generatorYield);
         creatingLedge = false;
     }
 }
