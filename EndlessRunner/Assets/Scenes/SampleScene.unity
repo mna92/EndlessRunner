@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1159432, g: 0.10985588, b: 0.22281826, a: 1}
+  m_IndirectSpecularColor: {r: 0.05632913, g: 0.062140897, b: 0.15067825, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1231,7 +1231,6 @@ GameObject:
   - component: {fileID: 501524593}
   - component: {fileID: 501524594}
   - component: {fileID: 501524595}
-  - component: {fileID: 501524596}
   m_Layer: 0
   m_Name: GlobalScripts
   m_TagString: Untagged
@@ -1355,20 +1354,6 @@ MonoBehaviour:
   playerObject: {fileID: 713549270}
   countdownAudio: {fileID: 262698583}
   finalScore: {fileID: 1453815010}
-  mainCamera: {fileID: 0}
---- !u!114 &501524596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501524588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c844b2385f9d8b419f7b1fced771912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timePast: 0
 --- !u!1 &502050436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,8 +1390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -281.354, y: -97.688}
-  m_SizeDelta: {x: 520, y: 1220}
+  m_AnchoredPosition: {x: -299.0983, y: -97.688}
+  m_SizeDelta: {x: 480, y: 1220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502050438
 MonoBehaviour:
@@ -2143,6 +2128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74787c2d7c074d945944d22090cfec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 3
 --- !u!143 &713549276
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4785,8 +4771,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276, y: -97.687996}
-  m_SizeDelta: {x: 520, y: 1220}
+  m_AnchoredPosition: {x: 294.94104, y: -97.687996}
+  m_SizeDelta: {x: 480, y: 1220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910174227
 MonoBehaviour:
