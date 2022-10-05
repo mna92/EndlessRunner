@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Difficulty : MonoBehaviour
 {
-    public float timePast = 0;
+    public static float timePast = 0;
 
     private void Update()
     {

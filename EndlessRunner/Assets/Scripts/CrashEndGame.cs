@@ -58,5 +58,6 @@ public class CrashEndGame : MonoBehaviour
         LedgeGenerator.generatorYield = 0.985f;
         LedgeGenerator.destroyDelay = 10;
         CharacterLocomotion.moveSpeed = 3f;
+        Difficulty.timePast = 0;
     }
 }
