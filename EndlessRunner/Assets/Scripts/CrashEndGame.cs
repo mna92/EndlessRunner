@@ -33,6 +33,10 @@ public class CrashEndGame : MonoBehaviour
         globalScript.GetComponent<Difficulty>().enabled = false;
         globalScript.GetComponent<LedgeGenerator>().enabled = false;
         playerObject.GetComponent<CharacterLocomotion>().enabled = false;
+        LedgeGenerator.generatorYield = 0.985f;
+        LedgeGenerator.destroyDelay = 10;
+        CharacterLocomotion.moveSpeed = 3f;
+        Difficulty.timePast = 0;
         gameOverFinalScore.GetComponentInChildren<Text>().text = "FINAL SCORE: " + ScoreCubeMonitor.scoreNumber;
         PlayerPrefs.SetInt("LastScore", ScoreCubeMonitor.scoreNumber);
         lastScore.GetComponent<Text>().text = "LAST SCORE: " + lastScoreValue;
@@ -55,9 +59,5 @@ public class CrashEndGame : MonoBehaviour
         yield return new WaitForSeconds(1f);
         tapToStart.GetComponent<Button>().enabled = true;
         locomotionButtons.SetActive(true);
-        LedgeGenerator.generatorYield = 0.985f;
-        LedgeGenerator.destroyDelay = 10;
-        CharacterLocomotion.moveSpeed = 3f;
-        Difficulty.timePast = 0;
     }
 }

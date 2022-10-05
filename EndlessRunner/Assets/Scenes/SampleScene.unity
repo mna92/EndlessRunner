@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07086753, g: 0.07268273, b: 0.16632721, a: 1}
+  m_IndirectSpecularColor: {r: 0.056473985, g: 0.06202369, b: 0.1509031, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'NEW GAME LAb
+  m_Text: 'NEW GAME LAB
 
     MNA'
 --- !u!222 &6963871
@@ -1367,7 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c844b2385f9d8b419f7b1fced771912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePast: 0
 --- !u!1 &502050436
 GameObject:
   m_ObjectHideFlags: 0
