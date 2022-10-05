@@ -10,7 +10,7 @@ public class LedgeGenerator : MonoBehaviour
     public bool creatingLedge = false;
     GameObject clone;
     public static float generatorYield = 0.985f;
-    public static int destroyDelay;
+    public static int destroyDelay = 10;
 
     private void Update()
     {

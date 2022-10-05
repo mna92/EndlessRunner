@@ -30,6 +30,7 @@ public class CrashEndGame : MonoBehaviour
     {
         bgm.enabled = false;
         crashSound.Play();
+        globalScript.GetComponent<Difficulty>().enabled = false;
         globalScript.GetComponent<LedgeGenerator>().enabled = false;
         playerObject.GetComponent<CharacterLocomotion>().enabled = false;
         gameOverFinalScore.GetComponentInChildren<Text>().text = "FINAL SCORE: " + ScoreCubeMonitor.scoreNumber;
@@ -54,5 +55,7 @@ public class CrashEndGame : MonoBehaviour
         yield return new WaitForSeconds(1f);
         tapToStart.GetComponent<Button>().enabled = true;
         locomotionButtons.SetActive(true);
+        LedgeGenerator.generatorYield = 0.985f;
+        LedgeGenerator.destroyDelay = 10;
     }
 }

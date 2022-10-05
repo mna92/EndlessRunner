@@ -13,8 +13,8 @@ public class Difficulty : MonoBehaviour
         {
             timePast = 0;
             CharacterLocomotion.moveSpeed += 0.5f;
-            LedgeGenerator.generatorYield -= 0.1f;
-            LedgeGenerator.destroyDelay += 4;
+            LedgeGenerator.generatorYield -= 0.2f;
+            LedgeGenerator.destroyDelay += 5;
         }
     }
 }

@@ -14,7 +14,6 @@ public class SplashController : MonoBehaviour
     public GameObject playerObject;
     public AudioSource countdownAudio;
     public GameObject finalScore;
-    public GameObject mainCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -73,8 +72,8 @@ public class SplashController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         countDown.SetActive(false);
         audioBGM.enabled = true;
+        globalScripts.GetComponent<Difficulty>().enabled = true;
         globalScripts.GetComponent<LedgeGenerator>().enabled = true;
         playerObject.GetComponent<CharacterLocomotion>().enabled = true;
-        globalScripts.GetComponent<Difficulty>().enabled = true;
     }
 }
