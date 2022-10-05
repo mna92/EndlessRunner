@@ -57,5 +57,6 @@ public class CrashEndGame : MonoBehaviour
         locomotionButtons.SetActive(true);
         LedgeGenerator.generatorYield = 0.985f;
         LedgeGenerator.destroyDelay = 10;
+        CharacterLocomotion.moveSpeed = 3f;
     }
 }
